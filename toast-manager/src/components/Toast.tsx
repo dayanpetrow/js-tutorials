@@ -21,6 +21,8 @@ const Toast: React.FC<ToastProps> = (props) => {
     return () => clearTimeout(timer);
   }, [destroy, duration]);
 
+  console.log('rerender');
+
   return (
     <div>
       <div className={"toast-header"}>
@@ -37,3 +39,4 @@ const shouldRerender = (prevProps: ToastProps, nextProps: ToastProps) => {
 };
 
 export default React.memo(Toast, shouldRerender);
+

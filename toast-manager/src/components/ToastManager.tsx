@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Toast, { ToastProps } from "./Toast";
 
 interface ToastOptions {
+  id?: string;
   title: string;
   content: string;
   duration?: number;
@@ -23,8 +24,8 @@ export class ToastManager {
   public show(options: ToastOptions): void {
     const toastId = Math.random().toString(36).substr(2, 9);
     const toast: ToastProps = {
-      ...options,
       id: toastId,
+      ...options,
       destroy: () => this.destroy(toastId),
     };
 

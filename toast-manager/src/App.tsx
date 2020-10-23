@@ -3,6 +3,7 @@ import "./App.css";
 import { toast } from "./components/ToastManager";
 
 toast.show({
+  id: 'my-id',
   title: "Onload toast title",
   content: "Onload toast body",
   duration: 3000,
