@@ -26,7 +26,7 @@ export class ToastManager {
     const toast: ToastProps = {
       id: toastId,
       ...options, // if id is passed within options, it will overwrite the auto-generated one
-      destroy: () => this.destroy(toastId),
+      destroy: () => this.destroy(options.id ?? toastId),
     };
 
     this.toasts = [toast, ...this.toasts];
