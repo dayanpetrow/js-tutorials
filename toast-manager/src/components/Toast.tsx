@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+
 export interface ToastProps {
   id: string;
   destroy: () => void;
@@ -20,8 +21,6 @@ const Toast: React.FC<ToastProps> = (props) => {
 
     return () => clearTimeout(timer);
   }, [destroy, duration]);
-
-  console.log('rerender');
 
   return (
     <div>

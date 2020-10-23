@@ -2,12 +2,14 @@ import React from "react";
 import "./App.css";
 import { toast } from "./components/ToastManager";
 
+// display a toast message when the page loads
+// you can call toast.destroy('my-id') from anywhere to remove this message manually with code
 toast.show({
   id: 'my-id',
   title: "Onload toast title",
   content: "Onload toast body",
-  duration: 3000,
-})
+  duration: 10000,
+});
 
 function App() {
   return (
